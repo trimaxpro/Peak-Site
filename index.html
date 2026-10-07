@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Coca-Cola — Open Happiness</title>
+  <title>BCA — Bachelor of Computer Applications</title>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@400;700;900&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -22,245 +20,316 @@
     }
 
     body {
-      background: #090909;
-      color: #fff;
+      background: #08090c;
+      color: #f5f5f5;
       font-family: "Inter", sans-serif;
+      line-height: 1.6;
     }
 
-    header {
-      height: 72px;
-      padding: 0 7%;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* Navbar */
+    nav {
+      height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid #242424;
-      background: #090909;
+      border-bottom: 1px solid #202229;
     }
 
     .logo {
-      color: #e50914;
-      font-family: "Lato", sans-serif;
-      font-size: 25px;
-      font-weight: 900;
-      letter-spacing: -1px;
-    }
-
-    nav {
       display: flex;
-      gap: 30px;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 20px;
     }
 
-    nav a {
-      color: #aaa;
-      text-decoration: none;
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      background: #ffffff;
+      color: #08090c;
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      color: #a7a9b0;
       font-size: 14px;
     }
 
-    nav a:hover {
-      color: #fff;
+    .nav-links a:hover {
+      color: white;
     }
 
-    .menu {
-      display: none;
+    .nav-btn {
+      border: 1px solid #343740;
+      padding: 9px 16px;
+      border-radius: 7px;
+      font-size: 14px;
     }
 
     /* Hero */
     .hero {
-      min-height: 610px;
-      padding: 80px 7%;
-      display: flex;
+      padding: 95px 0 80px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
       align-items: center;
-      justify-content: space-between;
-      gap: 50px;
-      overflow: hidden;
-    }
-
-    .hero-text {
-      max-width: 570px;
     }
 
     .tag {
-      color: #e50914;
+      color: #9fa3ad;
       font-family: "Oswald", sans-serif;
       letter-spacing: 2px;
-      font-size: 13px;
+      font-size: 14px;
       text-transform: uppercase;
       margin-bottom: 18px;
     }
 
     h1 {
-      font-family: "Lato", sans-serif;
-      font-size: clamp(52px, 7vw, 88px);
-      line-height: .92;
+      font-size: clamp(45px, 7vw, 76px);
+      line-height: 1;
       letter-spacing: -4px;
       margin-bottom: 25px;
     }
 
+    h1 span {
+      color: #777b86;
+    }
+
     .hero p {
-      color: #aaa;
-      line-height: 1.7;
-      max-width: 470px;
+      max-width: 590px;
+      color: #a7a9b0;
+      font-family: "Lato", sans-serif;
+      font-size: 17px;
       margin-bottom: 30px;
     }
 
-    .button {
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      padding: 14px 22px;
-      background: #e50914;
-      color: white;
-      text-decoration: none;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 7px;
       font-size: 14px;
-      font-weight: 700;
-      border-radius: 3px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid #30333b;
     }
 
-    .button:hover {
-      background: #ff1823;
-    }
-
-    /* Bottle */
-    .bottle-area {
-      width: 390px;
-      height: 470px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .bottle {
-      width: 150px;
-      height: 410px;
-      background: linear-gradient(
-        90deg,
-        #6e0005,
-        #d20a15 35%,
-        #ff202b 55%,
-        #870006
-      );
-      border-radius: 48px 48px 38px 38px;
-      position: relative;
-      box-shadow: 0 25px 80px rgba(229, 9, 20, .25);
-    }
-
-    .bottle::before {
-      content: "";
-      position: absolute;
-      width: 48px;
-      height: 55px;
-      background: #b70710;
-      top: -40px;
-      left: 51px;
-      border-radius: 7px 7px 3px 3px;
-    }
-
-    .label {
-      position: absolute;
-      top: 155px;
-      left: 0;
-      width: 100%;
-      height: 105px;
+    .btn-primary {
       background: #fff;
-      color: #d90814;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Lato", sans-serif;
-      font-size: 20px;
-      font-weight: 900;
-      transform: rotate(-4deg);
+      color: #08090c;
     }
 
-    /* Story */
-    .story {
-      padding: 70px 7%;
-      border-top: 1px solid #242424;
+    .btn-secondary {
+      background: #111319;
+      color: #fff;
+    }
+
+    /* Hero Card */
+    .course-card {
+      background: #101218;
+      border: 1px solid #292c34;
+      border-radius: 14px;
+      padding: 25px;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #343740;
+      border-radius: 10px;
+    }
+
+    .status {
+      font-size: 12px;
+      color: #a8adb7;
+      border: 1px solid #343740;
+      padding: 5px 9px;
+      border-radius: 20px;
+    }
+
+    .course-card h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .course-card p {
+      color: #888c96;
+      font-size: 14px;
+    }
+
+    .course-info {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
+      gap: 10px;
+      margin-top: 25px;
     }
 
-    .story h2 {
-      font-family: "Lato", sans-serif;
-      font-size: 42px;
-      margin-bottom: 15px;
+    .info {
+      padding: 13px;
+      background: #0b0d11;
+      border: 1px solid #242730;
+      border-radius: 8px;
     }
 
-    .story p {
-      color: #999;
-      line-height: 1.8;
+    .info small {
+      display: block;
+      color: #777b85;
+      margin-bottom: 3px;
     }
 
-    .story-card {
-      border-left: 2px solid #e50914;
-      padding-left: 25px;
+    .info strong {
+      font-size: 14px;
     }
 
-    .story-card h3 {
+    /* Sections */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      margin-bottom: 35px;
+    }
+
+    .section-title small {
+      color: #777b85;
       font-family: "Oswald", sans-serif;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+      margin-top: 7px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .feature {
+      background: #101218;
+      border: 1px solid #292c34;
+      padding: 25px;
+      border-radius: 10px;
+    }
+
+    .feature i {
+      margin-bottom: 25px;
+    }
+
+    .feature h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #888c96;
+      font-size: 14px;
+    }
+
+    /* Subjects */
+    .subjects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .subject {
+      border: 1px solid #30333b;
+      background: #101218;
+      padding: 11px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    /* CTA */
+    .cta {
+      border: 1px solid #292c34;
+      background: #101218;
+      border-radius: 12px;
+      padding: 45px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #888c96;
+      margin-bottom: 25px;
     }
 
     /* Footer */
     footer {
-      padding: 30px 7%;
-      border-top: 1px solid #242424;
+      border-top: 1px solid #202229;
+      padding: 25px 0;
+      color: #6f737d;
+      font-size: 13px;
       display: flex;
       justify-content: space-between;
-      color: #666;
-      font-size: 13px;
     }
 
-    .social {
-      display: flex;
-      gap: 15px;
-    }
-
-    .social a {
-      color: #777;
-    }
-
-    .social a:hover {
-      color: #fff;
-    }
-
+    /* Mobile */
     @media (max-width: 750px) {
-      nav {
+      .nav-links {
         display: none;
       }
 
-      .menu {
-        display: block;
-        color: #fff;
-      }
-
       .hero {
-        padding-top: 60px;
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .bottle-area {
-        width: 100%;
-      }
-
-      .story {
         grid-template-columns: 1fr;
-        gap: 35px;
+        padding-top: 65px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 30px 20px;
       }
 
       footer {
         flex-direction: column;
-        gap: 20px;
+        gap: 8px;
       }
     }
   </style>
@@ -268,93 +337,235 @@
 
 <body>
 
-  <header>
-    <div class="logo">Coca-Cola</div>
+  <div class="container">
 
+    <!-- Navigation -->
     <nav>
-      <a href="#home">Home</a>
-      <a href="#story">Our Story</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <a href="#" class="logo">
+        <span class="logo-icon">
+          <i data-lucide="code-2"></i>
+        </span>
+        BCA
+      </a>
 
-    <i data-lucide="menu" class="menu"></i>
-  </header>
-
-
-  <main>
-
-    <section class="hero" id="home">
-
-      <div class="hero-text">
-        <div class="tag">Since 1886</div>
-
-        <h1>Open<br>Happiness.</h1>
-
-        <p>
-          Coca-Cola is one of the world's most recognizable beverage brands,
-          bringing people together through its iconic taste and timeless
-          identity.
-        </p>
-
-        <a href="#story" class="button">
-          Discover more
-          <i data-lucide="arrow-right" size="17"></i>
-        </a>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#skills">Skills</a>
       </div>
 
-      <div class="bottle-area">
-        <div class="bottle">
-          <div class="label">Coca-Cola</div>
+      <a href="#apply" class="nav-btn">Explore Course</a>
+    </nav>
+
+
+    <!-- Hero -->
+    <main class="hero">
+
+      <div>
+        <div class="tag">Bachelor of Computer Applications</div>
+
+        <h1>
+          Build your<br>
+          <span>future in tech.</span>
+        </h1>
+
+        <p>
+          BCA is an undergraduate computer application program designed
+          to build practical knowledge in programming, software development,
+          databases, networking and modern technology.
+        </p>
+
+        <div class="buttons">
+          <a href="#subjects" class="btn btn-primary">
+            Explore Subjects
+            <i data-lucide="arrow-right"></i>
+          </a>
+
+          <a href="#skills" class="btn btn-secondary">
+            Learn More
+          </a>
         </div>
       </div>
 
+
+      <!-- Course Card -->
+      <div class="course-card">
+
+        <div class="card-top">
+          <div class="card-icon">
+            <i data-lucide="terminal"></i>
+          </div>
+
+          <span class="status">Undergraduate</span>
+        </div>
+
+        <h2>BCA</h2>
+
+        <p>
+          Computer Applications & Software Development
+        </p>
+
+        <div class="course-info">
+          <div class="info">
+            <small>Duration</small>
+            <strong>3 Years</strong>
+          </div>
+
+          <div class="info">
+            <small>Level</small>
+            <strong>UG Degree</strong>
+          </div>
+
+          <div class="info">
+            <small>Focus</small>
+            <strong>Technology</strong>
+          </div>
+
+          <div class="info">
+            <small>Mode</small>
+            <strong>Academic</strong>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+
+    <!-- Overview -->
+    <section id="overview">
+
+      <div class="section-title">
+        <small>Why BCA</small>
+        <h2>Learn technology by building.</h2>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <i data-lucide="braces"></i>
+          <h3>Programming</h3>
+          <p>
+            Learn programming fundamentals, algorithms,
+            data structures and software development concepts.
+          </p>
+        </div>
+
+        <div class="feature">
+          <i data-lucide="database"></i>
+          <h3>Data & Systems</h3>
+          <p>
+            Understand databases, operating systems,
+            computer networks and information systems.
+          </p>
+        </div>
+
+        <div class="feature">
+          <i data-lucide="globe"></i>
+          <h3>Web Technology</h3>
+          <p>
+            Explore web development and create practical
+            applications using modern development technologies.
+          </p>
+        </div>
+
+      </div>
     </section>
 
 
-    <section class="story" id="story">
+    <!-- Subjects -->
+    <section id="subjects">
 
-      <div>
-        <div class="tag">The Brand</div>
-        <h2>A taste that became an icon.</h2>
-        <p>
-          From its beginnings in Atlanta to becoming a global beverage brand,
-          Coca-Cola has built a visual identity recognized around the world.
-        </p>
+      <div class="section-title">
+        <small>Curriculum</small>
+        <h2>Core subjects</h2>
       </div>
 
-      <div class="story-card">
-        <h3>Classic. Simple. Timeless.</h3>
-        <p>
-          The familiar red identity, distinctive script and unmistakable
-          bottle have helped Coca-Cola remain one of the most recognizable
-          brands in popular culture.
-        </p>
+      <div class="subjects">
+        <div class="subject">Programming in C</div>
+        <div class="subject">Data Structures</div>
+        <div class="subject">Database Management</div>
+        <div class="subject">Computer Networks</div>
+        <div class="subject">Operating Systems</div>
+        <div class="subject">Web Development</div>
+        <div class="subject">Software Engineering</div>
+        <div class="subject">Computer Architecture</div>
+        <div class="subject">Java Programming</div>
+        <div class="subject">Mathematics</div>
       </div>
 
     </section>
 
-  </main>
+
+    <!-- Skills -->
+    <section id="skills">
+
+      <div class="section-title">
+        <small>Career Skills</small>
+        <h2>What you can build.</h2>
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <i data-lucide="layout-dashboard"></i>
+          <h3>Web Applications</h3>
+          <p>
+            Build websites, dashboards and interactive web applications.
+          </p>
+        </div>
+
+        <div class="feature">
+          <i data-lucide="server"></i>
+          <h3>Software Systems</h3>
+          <p>
+            Understand the technologies behind modern software and systems.
+          </p>
+        </div>
+
+        <div class="feature">
+          <i data-lucide="briefcase-business"></i>
+          <h3>Technology Careers</h3>
+          <p>
+            Prepare for roles in development, testing, support and IT.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
 
 
-  <footer id="contact">
-    <span>© 2026 The Coca-Cola Company</span>
+    <!-- CTA -->
+    <section id="apply">
 
-    <div class="social">
-      <a href="#" aria-label="Instagram">
-        <i data-lucide="instagram" size="17"></i>
-      </a>
+      <div class="cta">
+        <h2>Start with the fundamentals.</h2>
 
-      <a href="#" aria-label="Facebook">
-        <i data-lucide="facebook" size="17"></i>
-      </a>
+        <p>
+          Learn the concepts, practice consistently and turn your ideas
+          into working software.
+        </p>
 
-      <a href="#" aria-label="Twitter">
-        <i data-lucide="twitter" size="17"></i>
-      </a>
-    </div>
-  </footer>
+        <a href="#overview" class="btn btn-primary">
+          Explore BCA
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </div>
+
+    </section>
 
 
+    <!-- Footer -->
+    <footer>
+      <span>BCA — Bachelor of Computer Applications</span>
+      <span>© 2026 BCA</span>
+    </footer>
+
+  </div>
+
+
+  <!-- Activate Lucide Icons -->
   <script>
     lucide.createIcons();
   </script>
